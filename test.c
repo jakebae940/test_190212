@@ -2,3 +2,6 @@
 
 
 int a;
+
+
+int b;
