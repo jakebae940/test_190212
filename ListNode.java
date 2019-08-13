@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 /**
  * Main class for linked list data structure. A linked list is a data structure consisting of a
  * group of nodes which together represent a sequence. Under the simplest form, each node is
@@ -22,6 +23,7 @@
  *
  * @author Pedro Vicente Gómez Sánchez.
  */
+
 public class ListNode<T> {
 
   private T data;
@@ -47,22 +49,31 @@ public class ListNode<T> {
     this.next = next;
   }
 
-  @Override public boolean equals(Object o) {
-    if (this == o) return true;
-    if (!(o instanceof ListNode)) return false;
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (!(o instanceof ListNode)) {
+      return false;
+    }
 
     ListNode listNode = (ListNode) o;
 
-    if (!data.equals(listNode.data)) return false;
+    if (!data.equals(listNode.data)) {
+      return false;
+    }
 
     return true;
   }
 
-  @Override public int hashCode() {
+  @Override
+  public int hashCode() {
     return data.hashCode();
   }
 
-  @Override public String toString() {
+  @Override
+  public String toString() {
     return "ListNode{" + "data=" + data + ", next=" + next + '}';
   }
 }
